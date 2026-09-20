@@ -1,0 +1,18 @@
+{
+  "name": "quicksilver-judge",
+  "version": "0.1.0",
+  "description": "Staged Jev pre-filter for PR/diff review (Ormus / Raven Judge shape)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "vitest": "^3.0.0"
+  }
+}
