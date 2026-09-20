@@ -1,19 +1,47 @@
 # quicksilver-judge
 
-**Liquid gold for TypeSafe Jev** — staged PR / diff pre-filter.
+> Fast as mercury, sharp as a raven's eye — stage the risk before you burn a full Judge pass.
 
-Ormus use: sit *in front of* a prose Judge (Raven Gold Crew Judge, or a frontier model). Jev runs a speculative fan-out of Nouls + Scores + one Choice (`pass` | `hold` | `escalate`). Code combines; the LLM only writes when you need sentences.
+**@ormus/quicksilver-judge** is a **staged PR / code pre-filter**: sketch a Noul-style risk matrix, run Choice or Score profiles, emit confidence-gated `PASS` / `HOLD` / `FAIL`. Ormus maps this to the **Raven Judge** shape — cheap first look, expensive review only when the alloy looks impure.
 
-Sibling kits: [aurum-gate](https://github.com/Ormus-Solutions/aurum-gate) · [gold-assay](https://github.com/Ormus-Solutions/gold-assay) · [molten-cascade](https://github.com/Ormus-Solutions/molten-cascade) · [karat-filter](https://github.com/Ormus-Solutions/karat-filter)
+Themes track the public **TypeSafe / Vercel Jev** playbooks and the open **master-Jev** teaching lane (Daniel Ch et al.): structured scores beat vibes; hold when confidence softens.
 
-## Shape
+## Install
 
+```bash
+npm i @ormus/quicksilver-judge
 ```
-diff text  →  one Jev call (all questions)  →  { verdict, risks[], scores }
+
+## Quick pour
+
+```ts
+import { prefilter, SCORE_PROFILE } from '@ormus/quicksilver-judge';
+
+prefilter(
+  { filesChanged: 12, linesAdded: 400, linesDeleted: 80, touchesAuth: true, hasTestDiff: false },
+  0.78,
+  SCORE_PROFILE,
+);
 ```
 
-Mocked by default in tests — no live API in CI.
+## Liquid Gold siblings
+
+| Repo | Role |
+|------|------|
+| [aurum-gate](https://github.com/Ormus-Solutions/aurum-gate) | Pattern 2 confidence gates |
+| [quicksilver-judge](https://github.com/Ormus-Solutions/quicksilver-judge) | **You are here** — Raven pre-filter |
+| [gold-assay](https://github.com/Ormus-Solutions/gold-assay) | Vibium UI proof scorer |
+| [molten-cascade](https://github.com/Ormus-Solutions/molten-cascade) | Pattern 4 cascade |
+| [karat-filter](https://github.com/Ormus-Solutions/karat-filter) | Pattern 5 + fan-out |
+| [liquid-gold](https://github.com/Ormus-Solutions/liquid-gold) | Index |
+
+## Scripts
+
+```bash
+npm test
+npm run build
+```
 
 ## License
 
-MIT (c) Ormus Solutions
+MIT © 2026 Ormus Solutions
